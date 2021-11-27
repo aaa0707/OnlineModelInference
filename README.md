@@ -19,3 +19,23 @@ Additionally, this code also sets up flask app to call the models through a REST
 2) There are currently no validation checks. If you pass in an Amino Acid sequence with a differenct length or unknown amino acid letter, the app will fail with a 500.
 
 3) Scalability - currently, the models simply take the entire data as input and return an output. This solution may not be scalable for larger ML workloads where input data can exceed the memory of the VM
+
+
+
+### Using the endpoint
+
+After deploying the model, you can use the endpoint using an online webpage:
+
+![image](https://user-images.githubusercontent.com/12434045/143666724-0d4755e4-8e8c-4c4a-9bf2-4ac4a642c6a5.png)
+
+
+This page can be accessed using <ip address of VM or localhost>/upload
+This API takes in a txt file as an input, where each row represents a unique sequence
+  
+When calling the API programmatically, you can directly call the <ip address of VM or localhost>/file_data route
+
+```
+import requests
+with open(<path_to_file>) as f:
+    r = requests.post("<URL of VM / localhost>/file_data", files = {"input_file": f})
+```
