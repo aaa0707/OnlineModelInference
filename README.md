@@ -10,7 +10,7 @@ This returns a sorted list of Amino acids according to model1 results
 
 #### Webapp
 
-Additionally, this code also sets up flask app to call the models through a REST API. The flask_app.py code handles the requests. I have also provided a docker file that can be used to setup a container and initialize the the container on a VM
+Additionally, this code also sets up flask app to call the models through a REST API. The flask_app.py code handles the requests. I have also provided a docker file that can be used to setup a container and initialize the the container on a VM. The Docker exposes port 5000 of the container, which will need to be forwarded to the public port of the VM
 
 #### Current limitations
 
