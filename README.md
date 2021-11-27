@@ -17,3 +17,5 @@ Additionally, this code also sets up flask app to call the models through a REST
 1) The model files are statically added to the tmp directly. This can be improved by taking model paths as an input and adding dockerfile steps to move these models to the tmp directory
 
 2) There are currently no validation checks. If you pass in an Amino Acid sequence with a differenct length or unknown amino acid letter, the app will fail with a 500.
+
+3) Scalability - currently, the models simply take the entire data as input and return an output. This solution may not be scalable for larger ML workloads where input data can exceed the memory of the VM
