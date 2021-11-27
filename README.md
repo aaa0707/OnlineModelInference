@@ -1,4 +1,4 @@
-# OnlineModelInference
+# Model Inferencing on Server
 
 This Repo contains code for running inference based on two models whose inputs are Amino Acid sequences of lengths 50
 
